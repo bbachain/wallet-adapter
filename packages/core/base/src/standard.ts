@@ -1,11 +1,11 @@
 import {
-    SolanaSignAndSendTransaction,
-    type SolanaSignAndSendTransactionFeature,
-    type SolanaSignInFeature,
-    type SolanaSignMessageFeature,
-    SolanaSignTransaction,
-    type SolanaSignTransactionFeature,
-} from '@solana/wallet-standard-features';
+    BBAChainSignAndSendTransaction,
+    type BBAChainSignAndSendTransactionFeature,
+    type BBAChainSignInFeature,
+    type BBAChainSignMessageFeature,
+    BBAChainSignTransaction,
+    type BBAChainSignTransactionFeature,
+} from '@bbachain/wallet-standard-features';
 import type { Wallet as StandardWallet, WalletWithFeatures as StandardWalletWithFeatures } from '@wallet-standard/base';
 import {
     StandardConnect,
@@ -19,8 +19,8 @@ import type { WalletAdapter, WalletAdapterProps } from './adapter.js';
 export type WalletAdapterCompatibleStandardWallet = StandardWalletWithFeatures<
     StandardConnectFeature &
         StandardEventsFeature &
-        (SolanaSignAndSendTransactionFeature | SolanaSignTransactionFeature) &
-        (StandardDisconnectFeature | SolanaSignMessageFeature | SolanaSignInFeature | object)
+        (BBAChainSignAndSendTransactionFeature | BBAChainSignTransactionFeature) &
+        (StandardDisconnectFeature | BBAChainSignMessageFeature | BBAChainSignInFeature | object)
 >;
 
 export interface StandardWalletAdapterProps<Name extends string = string> extends WalletAdapterProps<Name> {
@@ -37,6 +37,6 @@ export function isWalletAdapterCompatibleStandardWallet(
     return (
         StandardConnect in wallet.features &&
         StandardEvents in wallet.features &&
-        (SolanaSignAndSendTransaction in wallet.features || SolanaSignTransaction in wallet.features)
+        (BBAChainSignAndSendTransaction in wallet.features || BBAChainSignTransaction in wallet.features)
     );
 }

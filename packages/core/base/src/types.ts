@@ -10,7 +10,6 @@ export type Adapter =
     | StandardWalletAdapter;
 
 export enum WalletAdapterNetwork {
-    Mainnet = 'mainnet-beta',
+    Mainnet = 'mainnet',
     Testnet = 'testnet',
-    Devnet = 'devnet',
 }
