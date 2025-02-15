@@ -1,8 +1,8 @@
 {
-    "name": "@solana/wallet-adapter-base",
-    "version": "0.9.23",
-    "author": "Solana Maintainers <maintainers@solana.foundation>",
-    "repository": "https://github.com/anza-xyz/wallet-adapter",
+    "name": "@bbachain/wallet-adapter-base",
+    "version": "0.1.1",
+    "author": "BBAChain Labs <developers@bbachain.com>",
+    "repository": "https://github.com/bbachain/wallet-standard",
     "license": "Apache-2.0",
     "publishConfig": {
         "access": "public"
@@ -32,16 +32,16 @@
         "package": "shx mkdir -p lib/cjs && shx echo '{ \"type\": \"commonjs\" }' > lib/cjs/package.json"
     },
     "peerDependencies": {
-        "@solana/web3.js": "^1.77.3"
+        "@bbachain/web3.js": "^1.1.3"
     },
     "dependencies": {
-        "@solana/wallet-standard-features": "^1.1.0",
+        "@bbachain/wallet-standard-features": "^0.1.1",
         "@wallet-standard/base": "^1.0.1",
         "@wallet-standard/features": "^1.0.3",
         "eventemitter3": "^4.0.7"
     },
     "devDependencies": {
-        "@solana/web3.js": "^1.77.3",
+        "@bbachain/web3.js": "^1.1.3",
         "@types/node-fetch": "^2.6.4",
         "shx": "^0.3.4"
     }
