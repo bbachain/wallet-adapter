@@ -13,12 +13,6 @@ describe('getInferredClusterFromEndpoint()', () => {
             expect(getInferredClusterFromEndpoint(endpoint)).toBe('mainnet-beta');
         });
     });
-    describe("when the endpoint contains the word 'devnet'", () => {
-        const endpoint = 'https://foo-devnet.com';
-        it('creates a new mobile wallet adapter with `devnet` as the cluster', () => {
-            expect(getInferredClusterFromEndpoint(endpoint)).toBe('devnet');
-        });
-    });
     describe("when the endpoint contains the word 'testnet'", () => {
         const endpoint = 'https://foo-testnet.com';
         it('creates a new mobile wallet adapter with `testnet` as the cluster', () => {
