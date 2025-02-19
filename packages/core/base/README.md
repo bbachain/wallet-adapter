@@ -1,4 +1,4 @@
-# `@btigrouplabs/wallet-adapter-base`
+# `@bbachain/wallet-adapter-base`
 
 <!-- @TODO -->
 
