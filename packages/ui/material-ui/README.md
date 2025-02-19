@@ -1,4 +1,4 @@
-# `@solana/wallet-adapter-material-ui`
+# `@bbachain/wallet-adapter-material-ui`
 
 <!-- @TODO -->
 

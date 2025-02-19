@@ -1,4 +1,4 @@
-# `@solana/wallet-adapter-ant-design`
+# `@bbachain/wallet-adapter-ant-design`
 
 # Quick Setup (using Create-React-App with craco-less)
 See the [example](https://github.com/anza-xyz/wallet-adapter/tree/master/packages/example) package for more usage.
@@ -32,17 +32,17 @@ See the [example](https://github.com/anza-xyz/wallet-adapter/tree/master/package
 npm install --save \
     antd \
     @ant-design/icons \
-    @solana/web3.js \
+    @bbachain/web3.js \
     react
 ```
 4. Install these dependencies:
 
 ```
 npm install --save \
-    @solana/wallet-adapter-wallets \
-    @solana/wallet-adapter-react \
-    @solana/wallet-adapter-ant-design \
-    @solana/wallet-adapter-base
+    @bbachain/wallet-adapter-wallets \
+    @bbachain/wallet-adapter-react \
+    @bbachain/wallet-adapter-ant-design \
+    @bbachain/wallet-adapter-base
 ```
 
 

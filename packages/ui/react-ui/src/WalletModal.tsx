@@ -1,7 +1,7 @@
-import type { WalletName } from '@solana/wallet-adapter-base';
-import { WalletReadyState } from '@solana/wallet-adapter-base';
-import type { Wallet } from '@solana/wallet-adapter-react';
-import { useWallet } from '@solana/wallet-adapter-react';
+import type { WalletName } from '@bbachain/wallet-adapter-base';
+import { WalletReadyState } from '@bbachain/wallet-adapter-base';
+import type { Wallet } from '@bbachain/wallet-adapter-react';
+import { useWallet } from '@bbachain/wallet-adapter-react';
 import type { FC, MouseEvent } from 'react';
 import React, { useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
@@ -136,7 +136,7 @@ export const WalletModal: FC<WalletModalProps> = ({ className = '', container = 
                         </button>
                         {listedWallets.length ? (
                             <>
-                                <h1 className="wallet-adapter-modal-title">Connect a wallet on Solana to continue</h1>
+                                <h1 className="wallet-adapter-modal-title">Connect a wallet on BBAChain to continue</h1>
                                 <ul className="wallet-adapter-modal-list">
                                     {listedWallets.map((wallet) => (
                                         <WalletListItem
@@ -184,7 +184,7 @@ export const WalletModal: FC<WalletModalProps> = ({ className = '', container = 
                         ) : (
                             <>
                                 <h1 className="wallet-adapter-modal-title">
-                                    You'll need a wallet on Solana to continue
+                                    You'll need a wallet on BBAChain to continue
                                 </h1>
                                 <div className="wallet-adapter-modal-middle">
                                     <WalletSVG />
