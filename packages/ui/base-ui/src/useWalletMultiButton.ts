@@ -1,5 +1,5 @@
-import { useWallet, type Wallet } from '@solana/wallet-adapter-react';
-import type { PublicKey } from '@solana/web3.js';
+import { useWallet, type Wallet } from '@bbachain/wallet-adapter-react';
+import type { PublicKey } from '@bbachain/web3.js';
 import { useCallback } from 'react';
 
 type ButtonState = {
