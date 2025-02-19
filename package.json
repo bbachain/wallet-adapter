@@ -1,8 +1,8 @@
 {
     "private": true,
-    "name": "@solana/wallet-adapter",
-    "author": "Solana Maintainers <maintainers@solana.foundation>",
-    "repository": "https://github.com/anza-xyz/wallet-adapter",
+    "name": "@bbachain/wallet-adapter",
+    "author": "BBAChain Labs <developers@bbachain.com>",
+    "repository": "https://github.com/bbachain/wallet-adapter",
     "license": "Apache-2.0",
     "engines": {
         "node": ">=18",
@@ -48,6 +48,7 @@
         "typescript": "~4.7.4"
     },
     "overrides": {
+        "@bbachain/wallet-adapter-base": "workspace:^",
         "@ledgerhq/devices": "6.27.1",
         "@ledgerhq/errors": "6.16.3",
         "@ledgerhq/hw-transport": "6.27.1",
@@ -58,11 +59,13 @@
         "@solana/wallet-adapter-material-ui": "0.16.34",
         "@solana/wallet-adapter-react": "0.15.35",
         "@solana/wallet-adapter-react-ui": "0.9.35",
+        "@solana/wallet-adapter-wallets": "0.19.32",
         "@types/web": "npm:typescript@~4.7.4",
         "eslint": "8.22.0",
         "@ngraveio/bc-ur": "1.1.12"
     },
     "resolutions": {
+        "@bbachain/wallet-adapter-base": "workspace:^",
         "@ledgerhq/devices": "6.27.1",
         "@ledgerhq/errors": "6.16.3",
         "@ledgerhq/hw-transport": "6.27.1",
@@ -73,6 +76,7 @@
         "@solana/wallet-adapter-material-ui": "0.16.34",
         "@solana/wallet-adapter-react": "0.15.35",
         "@solana/wallet-adapter-react-ui": "0.9.35",
+        "@solana/wallet-adapter-wallets": "0.19.32",
         "@types/web": "npm:typescript@~4.7.4",
         "eslint": "8.22.0",
         "@ngraveio/bc-ur": "1.1.12"

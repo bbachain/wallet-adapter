@@ -40,8 +40,8 @@ import { clusterApiUrl } from '@bbachain/web3.js';
 import '@bbachain/wallet-adapter-react-ui/styles.css';
 
 export const Wallet: FC = () => {
-    // The network can be set to 'devnet', 'testnet', or 'mainnet-beta'.
-    const network = WalletAdapterNetwork.Devnet;
+    // The network can be set to 'testnet', or 'mainnet'.
+    const network = WalletAdapterNetwork.Testnet;
 
     // You can also provide a custom RPC endpoint.
     const endpoint = useMemo(() => clusterApiUrl(network), [network]);

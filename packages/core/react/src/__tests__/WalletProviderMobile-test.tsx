@@ -28,7 +28,7 @@ jest.mock('../getInferredClusterFromEndpoint.js', () => ({
             case 'https://fake-endpoint-for-test.com':
                 return 'fake-cluster-for-test';
             default:
-                return 'mainnet-beta';
+                return 'mainnet';
         }
     },
 }));

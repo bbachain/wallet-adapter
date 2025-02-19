@@ -1,6 +1,6 @@
 # FAQ (Frequently Asked Questions)
 
-Please search https://solana.stackexchange.com and the issues in the repo. Issues are only for bug reports and feature requests.
+Please search https://bbachain.stackexchange.com and the issues in the repo. Issues are only for bug reports and feature requests.
 
 - [I am building an app, how do I use this?](#i-am-building-an-app-how-do-i-use-this)
 - [I am building a wallet, how do I use this?](#i-am-building-a-wallet-how-do-i-use-this)
@@ -11,15 +11,15 @@ Please search https://solana.stackexchange.com and the issues in the repo. Issue
 
 ## I am building an app, how do I use this?
 
-See the guide [Wallet Adapter for Solana Apps](https://github.com/anza-xyz/wallet-adapter/blob/master/APP.md).
+See the guide [Wallet Adapter for BBAChain Apps](https://github.com/anza-xyz/wallet-adapter/blob/master/APP.md).
 
 ## I am building a wallet, how do I use this?
 
-See the guide [Wallet Adapter for Solana Wallets](https://github.com/anza-xyz/wallet-adapter/blob/master/WALLET.md).
+See the guide [Wallet Adapter for BBAChain Wallets](https://github.com/anza-xyz/wallet-adapter/blob/master/WALLET.md).
 
 ## How can I get support?
 
-Please ask questions on the [Solana Stack Exchange](https://solana.stackexchange.com).
+Please ask questions on the [BBAChain Stack Exchange](https://bbachain.stackexchange.com).
 
 After reading this FAQ, if you've found a bug or if you'd like to request a feature, please [open an issue](https://github.com/anza-xyz/wallet-adapter/issues/new).
 

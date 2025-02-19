@@ -1,4 +1,4 @@
-# `@solana/wallet-adapter-react`
+# `@bbachain/wallet-adapter-react`
 
 ## Creating a custom connect button
 
