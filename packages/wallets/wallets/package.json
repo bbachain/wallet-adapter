@@ -35,7 +35,7 @@
         "@bbachain/web3.js": "^1.1.3"
     },
     "dependencies": {
-        "@bbachain/wallet-adapter-phantom": "workspace:^",
+        "@bbachain/wallet-adapter-bbawallet": "workspace:^",
         "@bbachain/wallet-adapter-unsafe-burner": "workspace:^"
     },
     "devDependencies": {

@@ -612,7 +612,7 @@ importers:
         specifier: ^0.3.4
         version: 0.3.4
 
-  packages/wallets/phantom:
+  packages/wallets/bbawallet:
     dependencies:
       '@bbachain/wallet-adapter-base':
         specifier: workspace:^
@@ -649,9 +649,9 @@ importers:
 
   packages/wallets/wallets:
     dependencies:
-      '@bbachain/wallet-adapter-phantom':
+      '@bbachain/wallet-adapter-bbawallet':
         specifier: workspace:^
-        version: link:../phantom
+        version: link:../bbawallet
       '@bbachain/wallet-adapter-unsafe-burner':
         specifier: workspace:^
         version: link:../unsafe-burner
