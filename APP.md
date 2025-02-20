@@ -2,11 +2,11 @@
 
 This is a quick setup guide with examples of how to add Wallet Adapter to a React-based BBAChain app.
 
-See the [packages](https://github.com/anza-xyz/wallet-adapter/blob/master/PACKAGES.md) and [FAQ](https://github.com/anza-xyz/wallet-adapter/blob/master/FAQ.md) for other supported frontend frameworks.
+See the [packages](https://github.com/bbachain/wallet-adapter/blob/master/PACKAGES.md) and [FAQ](https://github.com/bbachain/wallet-adapter/blob/master/FAQ.md) for other supported frontend frameworks.
 
 ## Quick Setup (using React UI)
 
-There are also [material-ui](https://github.com/anza-xyz/wallet-adapter/tree/master/packages/ui/material-ui) and [ant-design](https://github.com/anza-xyz/wallet-adapter/tree/master/packages/ui/ant-design) packages if you use those UI component frameworks.
+There are also [material-ui](https://github.com/bbachain/wallet-adapter/tree/master/packages/ui/material-ui) and [ant-design](https://github.com/bbachain/wallet-adapter/tree/master/packages/ui/ant-design) packages if you use those UI component frameworks.
 
 ### Install
 
@@ -29,11 +29,7 @@ import React, { FC, useMemo } from 'react';
 import { ConnectionProvider, WalletProvider } from '@bbachain/wallet-adapter-react';
 import { WalletAdapterNetwork } from '@bbachain/wallet-adapter-base';
 import { UnsafeBurnerWalletAdapter } from '@bbachain/wallet-adapter-wallets';
-import {
-    WalletModalProvider,
-    WalletDisconnectButton,
-    WalletMultiButton
-} from '@bbachain/wallet-adapter-react-ui';
+import { WalletModalProvider, WalletDisconnectButton, WalletMultiButton } from '@bbachain/wallet-adapter-react-ui';
 import { clusterApiUrl } from '@bbachain/web3.js';
 
 // Default styles that can be overridden by your app
@@ -52,7 +48,7 @@ export const Wallet: FC = () => {
              * Wallets that implement either of these standards will be available automatically.
              *
              *   - BBAChain Wallet Standard
-             *     (https://github.com/anza-xyz/wallet-standard)
+             *     (https://github.com/bbachain/wallet-standard)
              *
              * If you wish to support a wallet that supports neither of those standards,
              * instantiate its legacy wallet adapter here. Common legacy adapters can be found
@@ -70,7 +66,7 @@ export const Wallet: FC = () => {
                 <WalletModalProvider>
                     <WalletMultiButton />
                     <WalletDisconnectButton />
-                    { /* Your app's components go here, nested within the context providers. */ }
+                    {/* Your app's components go here, nested within the context providers. */}
                 </WalletModalProvider>
             </WalletProvider>
         </ConnectionProvider>
@@ -106,7 +102,7 @@ export const SendSOLToRandomAddress: FC = () => {
 
         const {
             context: { slot: minContextSlot },
-            value: { blockhash, lastValidBlockHeight }
+            value: { blockhash, lastValidBlockHeight },
         } = await connection.getLatestBlockhashAndContext();
 
         const signature = await sendTransaction(transaction, connection, { minContextSlot });

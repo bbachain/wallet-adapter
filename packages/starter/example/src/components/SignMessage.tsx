@@ -1,6 +1,6 @@
 import { Button } from '@mui/material';
 import { ed25519 } from '@noble/curves/ed25519';
-import { useWallet } from '@solana/wallet-adapter-react';
+import { useWallet } from '@bbachain/wallet-adapter-react';
 import bs58 from 'bs58';
 import type { FC } from 'react';
 import React, { useCallback } from 'react';
@@ -18,7 +18,7 @@ export const SignMessage: FC = () => {
             const message = new TextEncoder().encode(
                 `${
                     window.location.host
-                } wants you to sign in with your Solana account:\n${publicKey.toBase58()}\n\nPlease sign in.`
+                } wants you to sign in with your BBAChain account:\n${publicKey.toBase58()}\n\nPlease sign in.`
             );
             const signature = await signMessage(message);
 

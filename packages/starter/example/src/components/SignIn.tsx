@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
-import { useWallet } from '@solana/wallet-adapter-react';
-import type { SolanaSignInInput } from '@solana/wallet-standard-features';
-import { verifySignIn } from '@solana/wallet-standard-util';
+import { useWallet } from '@bbachain/wallet-adapter-react';
+import type { BBAChainSignInInput } from '@bbachain/wallet-standard-features';
+import { verifySignIn } from '@bbachain/wallet-standard-util';
 import bs58 from 'bs58';
 import type { FC } from 'react';
 import React, { useCallback } from 'react';
@@ -13,9 +13,9 @@ export const SignIn: FC = () => {
 
     const onClick = useCallback(async () => {
         try {
-            if (!signIn) throw new Error('Wallet does not support Sign In With Solana!');
+            if (!signIn) throw new Error('Wallet does not support Sign In With BBAChain!');
 
-            const input: SolanaSignInInput = {
+            const input: BBAChainSignInInput = {
                 domain: window.location.host,
                 address: publicKey ? publicKey.toBase58() : undefined,
                 statement: 'Please sign in.',
