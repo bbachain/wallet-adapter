@@ -1,1 +1,0 @@
-# @bbachain/wallet-adapter-phantom

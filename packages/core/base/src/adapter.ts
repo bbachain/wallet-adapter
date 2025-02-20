@@ -45,7 +45,7 @@ export type WalletAdapter<Name extends string = string> = WalletAdapterProps<Nam
 /**
  * A wallet's readiness describes a series of states that the wallet can be in,
  * depending on what kind of wallet it is. An installable wallet (eg. a browser
- * extension like Phantom) might be `Installed` if we've found the Phantom API
+ * extension like BBA Wallet) might be `Installed` if we've found the BBA Wallet API
  * in the global scope, or `NotDetected` otherwise. A loadable, zero-install
  * runtime (eg. Torus Wallet) might simply signal that it's `Loadable`. Use this
  * metadata to personalize the wallet list for each user (eg. to show their
