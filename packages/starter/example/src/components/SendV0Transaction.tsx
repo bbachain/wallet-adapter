@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
-import { useConnection, useWallet } from '@solana/wallet-adapter-react';
-import type { TransactionSignature } from '@solana/web3.js';
-import { PublicKey, TransactionMessage, VersionedTransaction } from '@solana/web3.js';
+import { useConnection, useWallet } from '@bbachain/wallet-adapter-react';
+import type { TransactionSignature } from '@bbachain/web3.js';
+import { PublicKey, TransactionMessage, VersionedTransaction } from '@bbachain/web3.js';
 import type { FC } from 'react';
 import React, { useCallback } from 'react';
 import { useNotify } from './notify';
@@ -20,8 +20,8 @@ export const SendV0Transaction: FC = () => {
             if (!supportedTransactionVersions.has(0)) throw new Error("Wallet doesn't support v0 transactions!");
 
             /**
-             * This lookup table only exists on devnet and can be replaced as
-             * needed.  To create and manage a lookup table, use the `solana
+             * This lookup table only exists on testnet and can be replaced as
+             * needed.  To create and manage a lookup table, use the `bbachain
              * address-lookup-table` commands.
              */
             const { value: lookupTable } = await connection.getAddressLookupTable(
@@ -39,7 +39,7 @@ export const SendV0Transaction: FC = () => {
                 recentBlockhash: blockhash,
                 instructions: [
                     {
-                        data: Buffer.from('Hello, from the Solana Wallet Adapter example app!'),
+                        data: Buffer.from('Hello, from the BBAChain Wallet Adapter example app!'),
                         keys: lookupTable.state.addresses.map((pubkey, index) => ({
                             pubkey,
                             isWritable: index % 2 == 0,
@@ -68,7 +68,7 @@ export const SendV0Transaction: FC = () => {
             onClick={onClick}
             disabled={!publicKey || !supportedTransactionVersions?.has(0)}
         >
-            Send V0 Transaction using Address Lookup Table (devnet)
+            Send V0 Transaction using Address Lookup Table (testnet)
         </Button>
     );
 };

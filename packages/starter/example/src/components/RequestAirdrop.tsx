@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
-import { useConnection, useWallet } from '@solana/wallet-adapter-react';
-import type { TransactionSignature } from '@solana/web3.js';
-import { LAMPORTS_PER_SOL } from '@solana/web3.js';
+import { useConnection, useWallet } from '@bbachain/wallet-adapter-react';
+import type { TransactionSignature } from '@bbachain/web3.js';
+import { BBA_DALTON_UNIT } from '@bbachain/web3.js';
 import type { FC } from 'react';
 import React, { useCallback } from 'react';
 import { useNotify } from './notify';
@@ -16,7 +16,7 @@ export const RequestAirdrop: FC = () => {
         try {
             if (!publicKey) throw new Error('Wallet not connected!');
 
-            signature = await connection.requestAirdrop(publicKey, LAMPORTS_PER_SOL);
+            signature = await connection.requestAirdrop(publicKey, BBA_DALTON_UNIT);
             notify('info', 'Airdrop requested:', signature);
 
             await connection.confirmTransaction(signature, 'processed');

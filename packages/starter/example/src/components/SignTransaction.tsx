@@ -1,6 +1,6 @@
 import { Button } from '@mui/material';
-import { useConnection, useWallet } from '@solana/wallet-adapter-react';
-import { PublicKey, Transaction, TransactionInstruction } from '@solana/web3.js';
+import { useConnection, useWallet } from '@bbachain/wallet-adapter-react';
+import { PublicKey, Transaction, TransactionInstruction } from '@bbachain/web3.js';
 import bs58 from 'bs58';
 import type { FC } from 'react';
 import React, { useCallback } from 'react';
@@ -23,7 +23,7 @@ export const SignTransaction: FC = () => {
                 recentBlockhash: blockhash,
             }).add(
                 new TransactionInstruction({
-                    data: Buffer.from('Hello, from the Solana Wallet Adapter example app!'),
+                    data: Buffer.from('Hello, from the BBAChain Wallet Adapter example app!'),
                     keys: [],
                     programId: new PublicKey('MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr'),
                 })
